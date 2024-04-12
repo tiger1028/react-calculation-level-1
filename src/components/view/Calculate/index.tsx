@@ -61,7 +61,7 @@ export const CalculateView: React.FC = () => {
   };
   return (
     <Container>
-      <Title>-Calculate-</Title>
+      <Title>Calculate</Title>
       <Select id="method" onChange={(e: any) => setMethod(e.target.value)}>
         <Option value={OperationMethod.SUM}>Sum</Option>
         <Option value={OperationMethod.MEDIAN}>Medium</Option>
