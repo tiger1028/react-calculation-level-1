@@ -53,7 +53,7 @@ export const CalculateView: React.FC = () => {
   };
 
   const OnChangeInput = (index: number, targetValue: number) => {
-    setInputArray((preinputArray) => {
+    setInputArray((preinputArray: any) => {
       const predata = [...preinputArray];
       predata[index].value = targetValue;
       return predata;
@@ -61,7 +61,7 @@ export const CalculateView: React.FC = () => {
   };
   return (
     <Container>
-      <Title>-Calculate-</Title>
+      <Title>Calculate</Title>
       <Select id="method" onChange={(e: any) => setMethod(e.target.value)}>
         <Option value={OperationMethod.SUM}>Sum</Option>
         <Option value={OperationMethod.MEDIAN}>Medium</Option>
@@ -69,7 +69,7 @@ export const CalculateView: React.FC = () => {
       </Select>
       <Button onClick={handleSubmit}> calculate</Button>
       {inputArray.length &&
-        inputArray.map((row, index) => (
+        inputArray.map((row: any, index: number) => (
           <div key={index}>
             <Input
               type="number"
