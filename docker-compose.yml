@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  myfistpro:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      -5173:4000
+    container_name: myfirst
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
+
